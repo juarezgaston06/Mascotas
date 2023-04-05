@@ -27,7 +27,12 @@ export class ListadoMascotaComponent implements AfterViewInit, OnInit {
     private _serviceMascota: MascotaService
   ){}
   ngOnInit(): void {
-    this.dataSource.data = this._serviceMascota.listaMascotas;
+    this._serviceMascota.obtenerMascotas().subscribe((res)=>{
+      if(res){
+        console.log(res);
+        this.dataSource.data = res;
+      }
+    });
   }
   ngAfterViewInit() {
     this.dataSource.paginator = this.paginator;
