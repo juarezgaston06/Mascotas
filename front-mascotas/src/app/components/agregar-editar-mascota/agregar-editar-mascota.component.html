@@ -1,9 +1,9 @@
 <div class="title">
-    <h1>AGREGAR MASCOTA</h1>
+    <h1>{{funcion}} MASCOTA</h1>
 </div>
 <app-spinner *ngIf="esperando"></app-spinner>
 <div class="container">
-    <mat-card class="card">
+    <mat-card class="card">    
         <form [formGroup]="form">
             <mat-grid-list cols="2" rowHeight="80px">
                 <mat-grid-tile [colspan]="2">
@@ -37,7 +37,7 @@
                     </mat-form-field>
                 </mat-grid-tile>
                 <mat-grid-tile [colspan]="2">
-                    <button style="margin-right: 12px;"mat-raised-button color="primary"  (click)="agregarMascota()" [disabled]="form.invalid" routerLink="">Aceptar</button>
+                    <button style="margin-right: 12px;"mat-raised-button color="primary"  (click)="agregarMascota()" [disabled]="form.invalid">Aceptar</button>
                     <button mat-raised-button routerLink="">Volver</button>
                 </mat-grid-tile>
             </mat-grid-list>

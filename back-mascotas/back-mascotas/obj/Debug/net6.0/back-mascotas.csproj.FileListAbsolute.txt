@@ -66,3 +66,5 @@ C:\Users\Usuario\Documents\GitHub\Mascotas\back-mascotas\back-mascotas\obj\Debug
 C:\Users\Usuario\Documents\GitHub\Mascotas\back-mascotas\back-mascotas\obj\Debug\net6.0\back-mascotas.pdb
 C:\Users\Usuario\Documents\GitHub\Mascotas\back-mascotas\back-mascotas\obj\Debug\net6.0\back-mascotas.genruntimeconfig.cache
 C:\Users\Usuario\Documents\GitHub\Mascotas\back-mascotas\back-mascotas\obj\Debug\net6.0\ref\back-mascotas.dll
+C:\Users\Usuario\Documents\GitHub\Mascotas\back-mascotas\back-mascotas\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Usuario\Documents\GitHub\Mascotas\back-mascotas\back-mascotas\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

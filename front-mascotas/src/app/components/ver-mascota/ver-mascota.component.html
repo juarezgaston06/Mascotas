@@ -1,10 +1,13 @@
 <div class="title">
     <h1>VER MASCOTAS</h1>
 </div>
-<mat-card class="container card">
-    <mat-card-title>Bartolo</mat-card-title>
-    <mat-card-content>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corrupti corporis vitae quaerat modi aliquam doloremque accusantium iure repudiandae fugiat? Corrupti iusto inventore expedita? Dolores voluptatibus eaque harum repudiandae, facilis quaerat.
+<mat-card class="container card" *ngIf="mascota$ | async as mascota">
+    <mat-card-title>{{mascota.nombre}}</mat-card-title>
+    <mat-card-content>     
+        <p><strong>Raza:</strong>{{mascota.raza}}</p>
+        <p><strong>Color:</strong>{{mascota.color}}</p>
+        <p><strong>Peso:</strong>{{mascota.peso}}</p>
+        <p><strong>Edad:</strong>{{mascota.edad}}</p>       
     </mat-card-content>
     <mat-card-actions>
         <button mat-raised-button routerLink="">Volver</button>

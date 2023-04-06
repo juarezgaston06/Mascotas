@@ -44,15 +44,15 @@
           <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item  routerLink="/verMascota/1">
+          <button mat-menu-item  routerLink="/verMascota/{{element.id}}">
             <mat-icon color="primary">search</mat-icon>
             <span>Ver</span>
           </button>
-          <button mat-menu-item routerLink="/editarMascota/1">
+          <button mat-menu-item routerLink="/editarMascota/{{element.id}}">
             <mat-icon color="accent">edit</mat-icon>
             <span>Editar</span>
           </button>
-          <button mat-menu-item (click)="eliminarMascota(element.nombre)">
+          <button mat-menu-item (click)="eliminarMascota(element.id)">
             <mat-icon color="warn">delete</mat-icon>
             <span>Eliminar</span>
           </button>

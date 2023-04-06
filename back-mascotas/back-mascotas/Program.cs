@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using back_mascotas.models;
+using back_mascotas.models.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,10 @@ builder.Services.AddDbContext<AplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+builder.Services.AddScoped<IMascotaRepository, MascotaRepository>();
+
+builder.Services.AddAutoMapper(typeof(Program));
+
 
 var app = builder.Build();
 

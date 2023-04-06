@@ -29,7 +29,6 @@ export class ListadoMascotaComponent implements AfterViewInit, OnInit {
   ngOnInit(): void {
     this._serviceMascota.obtenerMascotas().subscribe((res)=>{
       if(res){
-        console.log(res);
         this.dataSource.data = res;
       }
     });
@@ -44,13 +43,15 @@ export class ListadoMascotaComponent implements AfterViewInit, OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  eliminarMascota(nombre: string){
+  eliminarMascota(id: number){
     this.esperando = true;
-    setTimeout(()=>{
+    this._serviceMascota.eliminarMascota(id).subscribe(()=> {
+      this.dataSource.data = this.dataSource.data.filter(masc => masc.id != id);
+      this._snackBar.open('Se a eliminado con exito la mascota', 'cerrar',{duration: 2500, horizontalPosition: 'right'});
       this.esperando = false;
-      this.dataSource.data = this.dataSource.data.filter(masc => masc.nombre != nombre);
-      this._snackBar.open('Se a eliminado con exito la mascota ' + nombre, 'cerrar',{duration: 2500, horizontalPosition: 'right'});
-    }, 3000);
+    });
+
+
 
   }
 }
